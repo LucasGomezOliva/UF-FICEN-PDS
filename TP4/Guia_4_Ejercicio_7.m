@@ -15,7 +15,7 @@ nTs = 0:ts:(L-1)*ts;    %   Tiempo discreto
 
 xk = noise;
 dk = recNoise;
-P = 16384;      %   Aproximado 16384 - 58k ( revisar orden del filtro )
+P = 2;                  %   P = Q Entonces es un filtro IIR
 Q = P;
 
 [ B, A, yk, ek ] = ARMA_Adaptativo( xk, dk ,P , Q );
