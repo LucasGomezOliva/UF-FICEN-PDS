@@ -57,5 +57,3 @@ function wc = Calculo_wc(B,A)
 [~,Ubmin] = min(abs(abs(H)-(1/sqrt(2))));
 wc = w(Ubmin);
 end
-
-
