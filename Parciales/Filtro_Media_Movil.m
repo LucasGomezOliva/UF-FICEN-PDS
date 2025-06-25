@@ -42,11 +42,15 @@ set(F2,'position',[80 130 900 550],'Menubar','figure',...
 zplane(B,A);
 grid on;
 
+h = impz(B,A);
 
 F3 = figure(3);
 set(F3,'position',[80 130 900 550],'Menubar','figure',...
         'NumberTitle','off','name',...
         'Filtro de Media Movil con L = 5 : Respuesta al impulso');
 
-impz(B,A);
+stem(0:1:length(h)-1,h,'LineWidth',1,'MarkerSize',8,'MarkerFaceColor','b')
+title('Respuesta al impulso')
+xlabel('n')
+ylabel('h[n]')
 grid on;
